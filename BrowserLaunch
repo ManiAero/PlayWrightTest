@@ -1,0 +1,26 @@
+
+//Firefox Launch
+
+
+const {firefox}= require('playwright') ;
+
+(async()=>{
+const browser = await firefox.launch({headless:false});
+const page= await browser.newPage();
+page.goto("https://www.amazon.in/")
+
+}
+)();
+
+//Chromium Launch
+
+const {chromium} = require ('playwright');
+
+(async()=> {
+
+    const browser = await chromium.launch({headless:false});
+    const page = await browser.newPage();
+    page.goto("https://www.flipkart.com/")
+}
+
+)();
